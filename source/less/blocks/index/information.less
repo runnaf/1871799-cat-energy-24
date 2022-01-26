@@ -1,0 +1,133 @@
+.information__contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  box-sizing: border-box;
+}
+
+.information__title {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.information__content {
+  flex-grow: 1;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.information__content-adress {
+  margin: 0;
+  padding-left: 17px;
+  box-sizing: border-box;
+}
+
+.information__cart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 362px;
+}
+
+.information__img-iframe {
+  border: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.information__img-card {
+  display: none;
+}
+
+.information__img-card--nojs {
+  display: block;
+}
+
+.information__img-iframe--nojs {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .information__contact-container {
+    justify-content: space-between;
+    padding-top: 59px;
+    padding-bottom: 59px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .information__title {
+    font-size: 20px;
+    line-height: 26px;
+    width: 180px;
+    flex-grow: 0;
+  }
+
+  .information__content {
+    flex-grow: 0;
+    text-align: end;
+    width: 180px;
+  }
+
+  .information__content-adress {
+    font-size: 16px;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  .information__cart {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .information {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+
+  .information__contact-container {
+    min-height: 198px;
+    height: max-content;
+    position: absolute;
+    left: 110px;
+    top: 96px;
+    background-color: @white;
+    z-index: 1;
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .information__title {
+    flex-grow: 1;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 20px;
+  }
+
+  .information__content {
+    text-align: left;
+    flex-grow: 1;
+    width: 50%;
+    margin-bottom: 5px;
+  }
+
+  .information__content-adress {
+    padding-left: 47px;
+  }
+}

@@ -1,0 +1,128 @@
+.about-program__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.about-program__list {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 49px;
+}
+
+.about-program__item {
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 60px;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.about-program__small {
+  display: none;
+}
+
+.about-program__icon {
+  width: 61px;
+  height: auto;
+}
+
+.about-program__icon-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @green;
+}
+
+.about-program__icon--alarm {
+  width: 25px;
+  height: 30px;
+}
+
+.about-program__content {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .about-program__title {
+    font-size: 60px;
+    margin-bottom: 72px;
+  }
+
+  .about-program__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 33px;
+    column-gap: 58px;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .about-program__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
+  }
+
+  .about-program__item {
+    position: relative;
+    padding-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    min-height: 285px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .about-program__small {
+    display: block;
+    position: absolute;
+    right: 77px;
+    top: -41px;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 280px;
+    line-height: 1;
+    color: @gray;
+    font-weight: 400;
+    height: 280px;
+    margin: 0;
+  }
+
+  .about-program__content {
+    z-index: 1;
+    margin: 0;
+    width: 265px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-program__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 59px;
+    margin: 0;
+  }
+
+  .about-program__small {
+    right: 17px;
+  }
+
+  .about-program__item {
+    min-height: 225px;
+  }
+}
