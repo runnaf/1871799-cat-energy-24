@@ -7,13 +7,45 @@
   margin-bottom: 37px;
 }
 
+.page-main__title--catalog {
+  margin-bottom: 39px;
+}
+
+.page-main__title--form {
+  padding-left: 5%;
+  box-sizing: border-box;
+}
+
 .page-main--inner {
   padding-top: 27px;
 }
 
 @media (min-width: @tablet-width) {
+  .page-main--index {
+    background-image: none;
+  }
+
   .page-main__title {
     font-size: 60px;
     margin-bottom: 54px;
+  }
+
+  .page-main__title--form {
+    padding-left: 9%;
+  }
+
+  .page-main--inner {
+    padding-top: 41px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main--inner {
+    padding-top: 51px;
+  }
+
+  .page-main__title--form {
+    padding-left: 110px;
+    margin-bottom: 55px;
   }
 }

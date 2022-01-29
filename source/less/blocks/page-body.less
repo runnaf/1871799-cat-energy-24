@@ -4,9 +4,13 @@
   font-size: 14px;
   line-height: 18px;
   color: @font-color;
-  background-color: @white;
+  background-color: @darkgray;
   margin: 0;
   min-width: 320px;
+}
+
+.page-body__wrapper {
+  background-color: @white;
 }
 
 @media (min-width: @desktop-width) {
@@ -14,26 +18,11 @@
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    // background-image: url("../../img/background/presentation-desktop.png");
-    // background-repeat: no-repeat;
-    // background-position: right -2px;
-
-    // @media (min-resolution: 2dppx) {
-    //   background-image: url("../img/bacground/presentation-desktop.png");
-    //   background-size: 1205px auto;
-    // }
   }
 
-  .page-body__container {
+  .page-body__wrapper--index {
     width: 1440px;
-    background-image: url("../../img/background/presentation-desktop.png");
-    background-repeat: no-repeat;
-    background-position: right -2px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bacground/presentation-desktop.png");
-      background-size: 1205px auto;
-    }
+    position: relative;
   }
 
   .page-body--ineer {

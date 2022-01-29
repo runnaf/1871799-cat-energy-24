@@ -1,14 +1,63 @@
 .range__scale {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 79px 1fr 80px;
   align-items: center;
 }
 
-.range__desc {
+.range__button {
   font-size: 16px;
   line-height: 20px;
   color: @black;
   text-transform: uppercase;
+  position: relative;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  &:hover {
+    background-image: none;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 1px;
+      right: 1px;
+      height: 1px;
+      background-color: hsla(0, 0%, 0%, 0.4);
+      content: "";
+    }
+  }
+
+  &:active,
+  &:focus-visible {
+    background-image: none;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.range__button:hover ~ .range__bar .range__toggle {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+}
+
+.range__button:active ~ .range__bar .range__toggle,
+.range__button:focus-visible ~ .range__bar .range__toggle {
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+  border: 1px solid @green;
+}
+
+.range__button--was {
+  text-align: end;
+}
+
+.range__button--become {
+  grid-column: 3/4;
+  text-align: left;
 }
 
 .range__bar {
@@ -25,6 +74,8 @@
   box-sizing: border-box;
   margin-left: 19px;
   margin-right: 17px;
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 .range__toggle {
@@ -63,14 +114,16 @@
     background-color: @darkgray;
     border: none;
     padding: 0;
-    margin-left: 21px;
-    margin-right: 23px;
+    margin: 0;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .range__toggle {
-    left: calc(50% - 16px);
-    width: 34px;
-    height: 34px;
+    left: calc(50% - 18px);
+    width: 33px;
+    height: 33px;
     border-radius: 50%;
     background-color: @white;
 
@@ -89,14 +142,23 @@
     }
   }
 
-  .range__desc {
+  .range__button {
     position: relative;
     font-size: 20px;
     line-height: 29.64px;
-    margin-left: 8px;
+    justify-self: center;
   }
 
   .range__scale {
-    justify-content: flex-start;
+    margin: 0;
+    grid-template-columns: 73px 1fr 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range__button {
+    background-image: url("../img/icons/dot.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
   }
 }

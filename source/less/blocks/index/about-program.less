@@ -1,6 +1,6 @@
 .about-program__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   font-size: 36px;
   line-height: 1;
   font-weight: 400;
@@ -39,12 +39,13 @@
 }
 
 .about-program__icon-wrapper {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: @green;
+  margin-right: 20px;
 }
 
 .about-program__icon--leaf {
@@ -55,7 +56,7 @@
   width: 30px;
 }
 
-.about-program__item--cutlery {
+.about-program__icon--cutlery {
   width: 26px;
 }
 
@@ -65,6 +66,10 @@
 
 .about-program__content {
   margin: 0;
+}
+
+.about-program__content br {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -83,7 +88,7 @@
   }
 
   .about-program__icon-wrapper {
-    width: 80px;
+    min-width: 80px;
     height: 80px;
     margin-bottom: 31px;
   }
@@ -96,7 +101,7 @@
     width: 30px;
   }
 
-  .about-program__item--cutlery {
+  .about-program__icon--cutlery {
     width: 26px;
   }
 
@@ -128,12 +133,20 @@
     margin: 0;
   }
 
+  .about-program__small--first {
+    right: 96px;
+  }
+
   .about-program__content {
     z-index: 1;
     margin: 0;
     width: 265px;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .about-program__content br {
+    display: inline;
   }
 }
 
@@ -148,7 +161,15 @@
     right: 17px;
   }
 
+  .about-program__small--first {
+    right: 36px;
+  }
+
   .about-program__item {
     min-height: 225px;
+  }
+
+  .about-program__icon-wrapper {
+    margin-bottom: 33px;
   }
 }

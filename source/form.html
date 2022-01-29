@@ -7,7 +7,7 @@
   <title>HTML Academy: Кэт энаржи</title>
   <link rel="preload" href="img/logo_cat-energy/logo_mobile.svg" as="image">
   <link rel="preload" type="font/woff2" crossorigin="anonymous" href="/fonts/oswaldmedium.woff2" as="font">
-  <link rel="preload" type="font/woff2" crossorigin="anonymous" href="/fonts/oswalddregular.woff2" as="font">
+  <link rel="preload" type="font/woff2" crossorigin="anonymous" href="/fonts/oswaldregular.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon16.ico"> <!-- 16×16 -->
   <link rel="icon" href="favicon32.ico"> <!-- 32×32 -->
@@ -16,7 +16,8 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page-body page-body--ineer">
-    <header class="page-header page-header--closed page-header--nojs page-header--ineer">
+  <div class="page-body__wrapper">
+    <header class="page-header container page-header--closed page-header--nojs page-header--ineer"> <!-- модификатор closed - закрытое ментю, модификатор opened - открытое меню, модификатор nojs - при отсутствии js -->
       <div class="page-header__container container__width container__width--logo">
         <a class="page-header__link-logo page-header__link-logo--ineer" href="index.html">
           <picture>
@@ -42,8 +43,8 @@
       </ul>
     </header>
     <main class="page-main page-main--inner container">
-      <h1 class="page-main__title container__width">Подбор программы</h1>
-      <section class="form-section container__width">
+      <h1 class="page-main__title page-main__title--form">Подбор программы</h1>
+      <section class="form-section">
         <h2 class="visually-hidden">Форма для подбора программы для вашего кота</h2>
         <p class="form-section__desc">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="form-section__group form">
@@ -54,14 +55,14 @@
                   <span class="form__field-title-desc">имя:</span>
                   <span class="form__field-title-required">*</span>
                 </label>
-                <input class="form__input" placeholder="Введите имя кота" type="text" name="name" id="name" value="Барсик" required>
+                <input class="form__input form__input--required" placeholder="Введите имя кота" type="text" name="name" id="name" value="Барсик" required>
               </div>
               <div class="form__fieild-container">
                 <label class="form__field-title form__field-title--required" for="weight">
                   <span class="form__field-title-desc">Вес (кг):</span>
                   <span class="form__field-title-required">*</span>
                 </label>
-                <input class="form__input" placeholder="Введите вес кота" type="text" name="weight" id="weight" value="7" required>
+                <input class="form__input form__input--required" placeholder="Введите вес кота" type="text" name="weight" id="weight" value="7" required>
               </div>
               <div class="form__fieild-container">
                 <label class="form__field-title" for="age">
@@ -89,15 +90,17 @@
             </fieldset>
           </div>
           <fieldset class="form__field-group form__field-group--contacts">
-            <lagend class="form__title">Контактные данные (владельца кота)</lagend>
-            <div class="form__field-group-container">
+            <legend class="form__title  form__title--contacts">
+              <span class="form__title-desc">Контактные данные (владельца кота)</span>
+            </legend>
+            <div class="form__field-group-container form__field-group-container--contacts">
               <div class="form__field">
                 <label class="form__field-title form__field-title--required" for="newsletter-email">
                   <span class="form__field-title-desc">E-mail:</span>
                   <span class="form__field-title-required">*</span>
                 </label>
                 <div class="form__input-container">
-                  <input class="form__input field-email" placeholder="E-mail" type="email" name="newsletter-email"
+                  <input class="form__input--required form__input form__input--contacts" placeholder="E-mail" type="email" name="newsletter-email"
                   id="newsletter-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="kuklachev@gmail.com" required>
                   <svg class="form__input-icon form__input-icon--email" width="19" height="14">
                     <use href="img/sprite.svg#e-mail"></use>
@@ -110,8 +113,8 @@
                   <span class="form__field-title-required">*</span>
                 </label>
                 <div class="form__input-container">
-                  <input class="form__input field-email" placeholder="телефон" type="tel" name="phone"
-                  id="phone" pattern="8 \([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" value="8 (960)900-60-90" required>
+                  <input class="form__input form__input--required form__input--contacts" placeholder="телефон" type="tel" name="phone"
+                  id="phone" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" value="8 (960) 900-60-90" required>
                   <svg class="form__input-icon form__input-icon--phone" width="20" height="21">
                     <use href="img/sprite.svg#phone"></use>
                   </svg>
@@ -120,12 +123,16 @@
             </div>
           </fieldset>
           <fieldset class="form__field-group form__field-group--texarea">
-            <label class="form__title form__title--texarea" for="comments">Комментарий</label>
-            <textarea class="form__area" id="comments" name="comments" rows="5" cols="33" placeholder="Расскажите обо всех повадках кота">
+            <label class="form__title form__title--texarea" for="comments">
+              <span class="form__title-desc">Комментарий</span>
+            </label>
+            <textarea class="form__area" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота">
             </textarea>
           </fieldset>
           <fieldset class="form__field-group form__field-group--checkbox">
-            <lagend class="form__title">Дополнительно</lagend>
+            <legend class="form__title">
+              <span class="form__title-desc">Дополнительно</span>
+            </legend>
             <ul class="form__list form__list--checkbox">
               <li class="form__item form__item--checkbox">
                 <input class="visually-hidden form__input-checkbox" type="checkbox" name="sweetener" id="sweetener">
@@ -175,7 +182,7 @@
           </fieldset>
         </form>
         <div class="form-section__note">
-          <button class="form-section__button button" type="button">отправить заявку</button>
+          <button class="form-section__button button button--form" type="button">отправить заявку</button>
           <p class="form-section__note-desc">* — Обязательные поля</p>
         </div>
       </section>
@@ -183,7 +190,7 @@
         <section class="information">
           <h2 class="visually-hidden">Контактные данные 'Кэт энержи'</h2>
           <div class="information__contact-container container__width container__width--information">
-            <h3 class="information__title">приглашаем к сотрудничеству дилеров!</h3>
+            <h3 class="information__title">приглашаем<br> к сотрудничеству дилеров!</h3>
             <div class="information__content">
               <p class="information__content-adress">ул. Большая Конюшенная, д. 19/8</p>
               <p class="information__content-adress">Санкт-Петербург</p>
@@ -196,20 +203,20 @@
               title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
           </div>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/information/background/location-desktop.webp 1x" srcset="img/information/location-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1440px)" srcset="img/information/location-desktop.jpg 1x" srcset="img/information/location-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/information/location-tablet.webp 1x, img/information/location-tablet@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 768px)" srcset="img/information/location-tablet.jpg 1x, img/information/location-tablet@2x.jpg 2x">
-            <source srcset="img/information/location-mobile.webp, img/information/location-mobile@2x.webp 2x" type="image/webp">
-            <img class="information__img-card information__img-card--nojs" src="img/information/location-mobile.jpg"
+            <source media="(min-width: 1440px)" srcset="img/background/location-desktop.webp 1x, img/background/location-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1440px)" srcset="img/background/location-desktop.jpg 1x, img/background/location-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/background/location-tablet.webp 1x, img/background/location-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/background/location-tablet.jpg 1x, img/background/location-tablet@2x.jpg 2x">
+            <source srcset="img/background/location-mobile.webp, img/background/location-mobile@2x.webp 2x" type="image/webp">
+            <img class="information__img-card information__img-card--nojs" src="img/background/location-mobile.jpg"
               srcset="img/information/location-mobile@2x.jpg 2x" alt="Карта с адресом местонахождения ул. Большая Конюшенная, 19/8, Санкт-Петербург" width="320" height="362">
           </picture>
         </section>
       </div>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <div class="page-footer__content-container container__width">
-        <a class="page-footer__link-logo">
+        <a class="page-footer__link-logo" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo_cat-energy/logo-footer_desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo_cat-energy/logo-footer_tablet.svg">
@@ -273,12 +280,12 @@
     });
   </script>
 
-  <script>
-    const mapIframe = document.getElementsByClassName("information__img-iframe")[0]
-    mapIframe?.classList?.remove("information__img-iframe--nojs")
+<script>
+  const mapIframe = document.getElementsByClassName("information__img-iframe")[0]
+  mapIframe?.classList?.remove("information__img-iframe--nojs")
 
-    const mapPicture = document.getElementsByClassName("information__img-card")[0]
-    mapPicture?.classList?.remove("information__img-card--nojs")
-    mapPicture?.classList?.add("information__img-card--hidden")
-  </script>
+  const mapPicture = document.getElementsByClassName("information__img-card")[0]
+  mapPicture?.classList?.remove("information__img-card--nojs")
+  mapPicture?.classList?.add("information__img-card--hidden")
+</script>
 </body>
