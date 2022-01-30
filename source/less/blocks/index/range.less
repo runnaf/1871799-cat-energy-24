@@ -48,7 +48,7 @@
 .range__button:active ~ .range__bar .range__toggle,
 .range__button:focus-visible ~ .range__bar .range__toggle {
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
-  border: 1px solid @green;
+  outline: 1px solid @green;
 }
 
 .range__button--was {
@@ -103,7 +103,7 @@
   &:active,
   &:focus-visible {
     filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
-    border: 1px solid @green;
+    outline: 1px solid @green;
   }
 }
 
@@ -147,18 +147,13 @@
     font-size: 20px;
     line-height: 29.64px;
     justify-self: center;
+    background-image: url("../img/icons/dot.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
   }
 
   .range__scale {
     margin: 0;
     grid-template-columns: 73px 1fr 70px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .range__button {
-    background-image: url("../img/icons/dot.svg");
-    background-repeat: repeat-x;
-    background-position: bottom;
   }
 }
