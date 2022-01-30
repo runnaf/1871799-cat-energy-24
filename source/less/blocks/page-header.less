@@ -168,8 +168,8 @@
     margin-left: auto;
     margin-right: auto;
     content: "";
-    width: 24px;
-    height: 1.5px;
+    width: 25px;
+    height: 2px;
     background-color: @black;
     box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
   }
@@ -210,10 +210,20 @@
     padding-right: 21px;
   }
 
+  .page-body--ineer .page-header--closed {
+    &::before {
+      display: none;
+    }
+  }
+
   .page-header--ineer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &::after {
+      display: none;
+    }
   }
 
   .page-header--ineer .page-header__list {
@@ -337,8 +347,8 @@
     padding-right: 102px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/bacground/index-background-desktop@2x.jpg");
-      background-size: 1205px auto;
+      background-image: url("../img/background/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
     }
   }
 

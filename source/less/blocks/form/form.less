@@ -159,6 +159,10 @@
   flex-grow: 1;
   color: @font-color;
   outline: none;
+
+  &::placeholder {
+    color: @font-color;
+  }
 }
 
 .form__input--required {
@@ -168,10 +172,12 @@
 
   &:focus {
     border-color: hsla(0, 0%, 27%, 1);
+    border-width: 2px;
   }
 
   &:focus-visible:invalid {
     border-color: hsla(0, 100%, 75%, 1);
+    border-width: 2px;
   }
 }
 
@@ -329,13 +335,28 @@
   &::placeholder {
     font-size: 16px;
     line-height: 18px;
+    color: @font-color;
+  }
+
+  &:hover {
+    border-color: @darkgray;
+  }
+
+  &:focus {
+    border-color: hsla(0, 0%, 27%, 1);
+    border-width: 2px;
+  }
+
+  &:focus-visible:invalid {
+    border-color: hsla(0, 100%, 75%, 1);
+    border-width: 2px;
   }
 }
 
 .form__mark {
   position: relative;
-  width: 28px;
-  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
   border: 1px solid @gray;
 }
 
@@ -347,9 +368,13 @@
   border-color: @darkgray;
 }
 
-.form__input-checkbox[type="checkbox"]:active + .form__input-desc,
+.form__input-checkbox[type="checkbox"]:disabled + .form__input-desc,
 .form__input-checkbox[type="checkbox"]:focus-visible + .form__input-desc {
   opacity: 0.3;
+}
+
+.form__input-checkbox[type="checkbox"]:active + .form__input-desc .form__mark {
+  border-color: @green;
 }
 
 .form__checkbox-icon {
@@ -544,8 +569,8 @@
   }
 
   .form__mark {
-    width: 39px;
-    height: 39px;
+    min-width: 39px;
+    min-height: 39px;
   }
 
   .form__field-desc {

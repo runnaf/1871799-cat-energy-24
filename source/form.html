@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Academy: Кэт энаржи</title>
+  <title>HTML Academy: Кэт энерджи</title>
   <link rel="preload" href="img/logo_cat-energy/logo_mobile.svg" as="image">
   <link rel="preload" type="font/woff2" crossorigin="anonymous" href="/fonts/oswaldmedium.woff2" as="font">
   <link rel="preload" type="font/woff2" crossorigin="anonymous" href="/fonts/oswaldregular.woff2" as="font">
@@ -16,8 +16,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page-body page-body--ineer">
-  <div class="page-body__wrapper">
-    <header class="page-header container page-header--closed page-header--nojs page-header--ineer"> <!-- модификатор closed - закрытое ментю, модификатор opened - открытое меню, модификатор nojs - при отсутствии js -->
+  <header class="page-header container page-header--closed page-header--nojs page-header--ineer"> <!-- модификатор closed - закрытое ментю, модификатор opened - открытое меню, модификатор nojs - при отсутствии js -->
       <div class="page-header__container container__width container__width--logo">
         <a class="page-header__link-logo page-header__link-logo--ineer" href="index.html">
           <picture>
@@ -55,20 +54,20 @@
                   <span class="form__field-title-desc">имя:</span>
                   <span class="form__field-title-required">*</span>
                 </label>
-                <input class="form__input form__input--required" placeholder="Введите имя кота" type="text" name="name" id="name" value="Барсик" required>
+                <input class="form__input form__input--required" type="text" name="name" id="name" placeholder="Барсик" required>
               </div>
               <div class="form__fieild-container">
                 <label class="form__field-title form__field-title--required" for="weight">
                   <span class="form__field-title-desc">Вес (кг):</span>
                   <span class="form__field-title-required">*</span>
                 </label>
-                <input class="form__input form__input--required" placeholder="Введите вес кота" type="text" name="weight" id="weight" value="7" required>
+                <input class="form__input form__input--required" type="text" name="weight" id="weight" placeholder="7" required>
               </div>
               <div class="form__fieild-container">
                 <label class="form__field-title" for="age">
                   <span class="form__field-title-desc">Возраст (лет):</span>
                 </label>
-                <input class="form__input" placeholder="Введите Возраст кота" type="text" name="age" id="age" value="7">
+                <input class="form__input" type="text" name="age" id="age" placeholder="7">
               </div>
             </fieldset>
             <fieldset class="form__field-group form__field-group--program">
@@ -100,8 +99,8 @@
                   <span class="form__field-title-required">*</span>
                 </label>
                 <div class="form__input-container">
-                  <input class="form__input--required form__input form__input--contacts" placeholder="E-mail" type="email" name="newsletter-email"
-                  id="newsletter-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="kuklachev@gmail.com" required>
+                  <input class="form__input--required form__input form__input--contacts" type="email" name="newsletter-email"
+                  id="newsletter-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="kuklachev@gmail.com" required>
                   <svg class="form__input-icon form__input-icon--email" width="19" height="14">
                     <use href="img/sprite.svg#e-mail"></use>
                   </svg>
@@ -113,8 +112,8 @@
                   <span class="form__field-title-required">*</span>
                 </label>
                 <div class="form__input-container">
-                  <input class="form__input form__input--phone form__input--required form__input--contacts" placeholder="телефон" type="tel" name="phone"
-                  id="phone" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" value="8 (960) 900-60-90" required>
+                  <input class="form__input form__input--phone form__input--required form__input--contacts" type="tel" name="phone"
+                  id="phone" pattern="8 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
                   <svg class="form__input-icon form__input-icon--phone" width="20" height="21">
                     <use href="img/sprite.svg#phone"></use>
                   </svg>
@@ -126,8 +125,7 @@
             <label class="form__title form__title--texarea" for="comments">
               <span class="form__title-desc">Комментарий</span>
             </label>
-            <textarea class="form__area" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота">
-            </textarea>
+            <textarea class="form__area" id="comments" name="comments" rows="5" columns="50" wrap="soft" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form__field-group form__field-group--checkbox">
             <legend class="form__title">
@@ -260,7 +258,6 @@
         </div>
       </div>
     </footer>
-  </div>
 
 
   <script>
