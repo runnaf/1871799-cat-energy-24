@@ -16,8 +16,8 @@
   &::after {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: -9%;
+    right: -8.5%;
     height: 1px;
     background-color: @gray;
     content: "";
@@ -48,10 +48,21 @@
 }
 
 .form__field-group-container {
+  position: relative;
   width: 85%;
   min-width: 280px;
   margin-left: auto;
   margin-right: auto;
+
+  &::after {
+    position: absolute;
+    left: -9%;
+    right: -8.6%;
+    bottom: 0;
+    height: 1px;
+    background-color: @gray;
+    content: "";
+  }
 }
 
 .form__field-group-container .form__field-group:first-of-type {
@@ -60,10 +71,14 @@
 
 .form__field-group--program {
   padding-top: 22px;
-  padding-bottom: 17px;
+  padding-bottom: 19px;
 }
 
 .form__field-group--contacts {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 26px;
+
   &::after {
     display: none;
   }
@@ -108,6 +123,14 @@
 
 .form__field-title-required {
   margin-left: -4px;
+}
+
+.form__field-group-container--contacts {
+  padding-bottom: 23px;
+
+  &::after {
+    display: none;
+  }
 }
 
 .form__item {
@@ -172,6 +195,10 @@
   padding-right: 40px;
 }
 
+.form__input--phone {
+  padding-left: 15px;
+}
+
 .form__label-radio {
   position: relative;
   padding-left: 45px;
@@ -230,8 +257,11 @@
   line-height: 26px;
   color: @black;
   text-transform: none;
+  padding: 0;
+  box-sizing: border-box;
   margin-bottom: 35px;
   position: relative;
+  width: 100%;
 
   &::after {
     height: 2px;
@@ -252,7 +282,7 @@
   grid-row: 1/2;
   box-sizing: border-box;
   max-width: 187px;
-  width: auto;
+  width: max-content;
 }
 
 .form__title--texarea {
@@ -263,7 +293,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -396,6 +426,10 @@
     min-width: 628px;
     width: 81%;
     box-sizing: border-box;
+
+    &::after {
+      display: none;
+    }
   }
 
   .form__field-group--contacts .form__field-title {
@@ -496,8 +530,9 @@
   }
 
   .form__field-group--contacts {
-    padding-top: 73px;
-    padding-bottom: 65px;
+    padding: 0;
+    margin-top: 73px;
+    margin-bottom: 42px;
   }
 
   .form__field-group--checkbox {
@@ -567,8 +602,14 @@
 
   .form__field-group-container--contacts {
     grid-template-columns: 567.5px 570px;
-    margin-bottom: 67px;
     width: 1217px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .form__field-group--contacts {
+    margin: 0;
+    margin-bottom: 68px;
   }
 
   .form__input-icon--phone {
