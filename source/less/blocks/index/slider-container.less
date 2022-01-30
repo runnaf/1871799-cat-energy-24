@@ -1,0 +1,41 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 280px;
+  min-height: 280px;
+  box-sizing: border-box;
+}
+
+.slider__picture-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.slider__picture {
+  width: 280px;
+  height: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    min-height: 585px;
+    width: 592px;
+  }
+
+  .slider__picture {
+    height: auto;
+    width: 592px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    min-height: 596px;
+  }
+
+  .slider__picture {
+    padding-top: 13px;
+  }
+}

@@ -1,0 +1,110 @@
+.container {
+  width: 100%;
+}
+
+.container__width {
+  width: 85%;
+  min-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container__width--logo {
+  width: 100%;
+}
+
+.container--about-program {
+  padding-top: 22px;
+}
+
+.container--exemple {
+  background-color: @gray;
+  padding-top: 25px;
+  padding-bottom: 38px;
+}
+
+.container--information-ineer {
+  background-color: @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .container__width {
+    width: 90%;
+    min-width: 708px;
+  }
+
+  .container__width--logo {
+    width: auto;
+    min-width: auto;
+  }
+
+  .container__width--presentation-link {
+    width: fit-content;
+    margin-left: 0;
+  }
+
+  .container--exemple {
+    padding-top: 43px;
+    padding-bottom: 47px;
+    position: relative;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, @white 57.3%, @gray 57.3%, @gray);
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 0;
+      background-color: @gray;
+      content: "";
+    }
+  }
+
+  .container--about-program {
+    padding-top: 46px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container__width {
+    width: 80%;
+    min-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container__width--logo {
+    width: auto;
+    min-width: auto;
+  }
+
+  .container__width--presentation-title {
+    width: 414px;
+    min-width: auto;
+    margin-left: 190px;
+  }
+
+  .container--about-program {
+    padding-top: 71px;
+  }
+
+  .container--exemple {
+    padding-top: 26px;
+    padding-bottom: 55px;
+    background-image: linear-gradient(to bottom, @white 32%, @gray 32%, @gray);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .container__width--information {
+    width: 565px;
+    min-width: min-content;
+  }
+
+  .container__width--catalog {
+    min-width: 1223px;
+  }
+}

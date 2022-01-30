@@ -1,0 +1,72 @@
+.button {
+  width: 100%;
+  min-height: 40px;
+  border: none;
+  background-color: @green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @white;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+
+  &:hover {
+    background-color: @green-hover;
+  }
+
+  &:active,
+  &:focus-visible {
+    color: hsla(0, 0%, 100%, 0.3);
+  }
+}
+
+.button--inner {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button--presentation {
+  width: 85%;
+  min-width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: fit-content;
+  }
+
+  .button--presentation {
+    min-height: 54px;
+    min-width: 245px;
+  }
+
+  .button--inner {
+    width: 100%;
+  }
+
+  .button--form {
+    min-height: 50px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--presentation {
+    min-width: 244px;
+  }
+
+  .button--inner {
+    width: 99%;
+  }
+
+  .button--form {
+    min-height: 52px;
+    width: 97%;
+    min-width: 568px;
+  }
+}

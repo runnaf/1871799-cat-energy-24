@@ -1,12 +1,280 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Кэт энаржи</title>
+  <link rel="preload" href="img/logo_cat-energy/logo_mobile.svg" as="image">
+  <link rel="preload" type="font/woff2" crossorigin="anonymous" href="/fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" type="font/woff2" crossorigin="anonymous" href="/fonts/oswaldregular.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon16.ico"> <!-- 16×16 -->
+  <link rel="icon" href="favicon32.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body class="page-body">
+  <div class="page-body__wrapper page-body__wrapper--index">
+    <header class="page-header page-header--closed page-header--nojs"> <!-- модификатор closed - закрытое ментю, модификатор opened - открытое меню, модификатор nojs - при отсутствии js -->
+      <div class="page-header__wrapper-content">
+        <div class="page-header__wrapper-menu">
+          <div class="page-header__container">
+            <a class="page-header__link-logo">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/logo_cat-energy/logo_desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo_cat-energy/logo_tablet.svg">
+                <img class="page-header__logo-picture" src="img/logo_cat-energy/logo_mobile.svg" alt="Логотип сайта 'Кэт энержи'" width="96" height="15">
+              </picture>
+            </a>
+            <button class="page-header__button" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
+          <ul class="page-header__list">
+            <li class="page-header__item">
+              <a class="page-header__link-menu page-header__link-menu--active">главная</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link-menu" href="catalog.html">каталог продукции</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link-menu" href="form.html">подбор программы</a>
+            </li>
+          </ul>
+        </div>
+        <section class="page-header__section presentation">
+          <div class="presentation__wrapper-content">
+            <h2 class="presentation__title">Функциональное питание для котов</h2>
+            <p class="presentation__slogan">Занялся собой? Займись котом!</p>
+            <div class="presentation__picture-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/background/index-can-desktop.webp 1x, img/background/index-can-desktop.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/background/index-can-tablet.webp 1x, img/background/index-can-tablet.webp 2x">
+                <source type="image/webp" srcset="img/background/index-can-mobile.webp 1x, img/background/index-can-mobile.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/background/index-can-desktop.png 1x, img/background/index-can-desktop.png 2x">
+                <source media="(min-width: 768px)" srcset="img/background/index-can-tablet.jpg 1x, img/background/index-can-tablet.jpg 2x">
+                <img class="presentation__picture" src="img/background/index-can-mobile.png" srcset="img/background/index-can-mobile@2x.png 2x" width="280" height="270" alt="Стаканчик с кормом CAT ENERGY PRO (курица)">
+              </picture>
+            </div>
+            <a class="presentation__link button button--presentation" href="#">подобрать программу</a>
+          </div>
+        </section>
+      </div>
+    </header>
+    <main class="page-main page-main--index container">
+      <h1 class="visually-hidden">Кэт энержи - функциональное питание для котов</h1>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+      <section class="program container__width">
+        <h2 class="visually-hidden">программы питания</h2>
+        <ul class="program__list">
+          <li class="program__item program__item--gain">
+            <h3 class="program__item-title program__item-title--gain">похудение</h3>
+            <p class="program__item-content">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="program__link" href="#">
+              <p class="program__link-desc">каталог slim</p>
+              <svg class="program__icon-arrow" width="24" height="12">
+                <use href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="program__item program__item--slim">
+            <h3 class="program__item-title program__item-title--slim">набор массы</h3>
+            <p class="program__item-content">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="program__link" href="#">
+              <p class="program__link-desc">каталог pro</p>
+              <svg class="program__icon-arrow" width="24" height="12">
+                <use href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <div class="container container--about-program">
+        <section class="about-program container__width">
+          <h2 class="about-program__title">Как это работает</h2>
+          <ol class="about-program__list">
+            <li class="about-program__item about-program__item--leaf">
+              <div class="about-program__icon-wrapper">
+                <svg class="about-program__icon about-program__icon--leaf" width="26" height="28">
+                  <use href="img/sprite.svg#leaf"></use>
+                </svg>
+              </div>
+              <p class="about-program__small about-program__small--first">1</p>
+              <p class="about-program__content">Функциональное питание содержит только полезные питательные вещества.</p>
+            </li>
+            <li class="about-program__item about-program__item--tub">
+              <div class="about-program__icon-wrapper">
+                <svg class="about-program__icon about-program__icon--tub" width="30" height="30">
+                  <use href="img/sprite.svg#tub"></use>
+                </svg>
+              </div>
+              <p class="about-program__small">2</p>
+              <p class="about-program__content">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            </li>
+            <li class="about-program__item about-program__item--cutlery">
+              <div class="about-program__icon-wrapper">
+                <svg class="about-program__icon about-program__icon--cutlery" width="26" height="30">
+                  <use href="img/sprite.svg#cutlery"></use>
+                </svg>
+              </div>
+              <p class="about-program__small">3</p>
+              <p class="about-program__content">Замените один-два приема обычной еды на наше функциональное питание.</p>
+            </li>
+            <li class="about-program__item about-program__item--alarm">
+              <div class="about-program__icon-wrapper">
+                <svg class="about-program__icon about-program__icon--alarm" width="25" height="30">
+                  <use href="img/sprite.svg#alarm"></use>
+                </svg>
+              </div>
+              <p class="about-program__small">4</p>
+              <p class="about-program__content">Уже через месяц наслаждайтесь изменениями к лучшему&#160;<br>вашего питомца!</p>
+            </li>
+          </ol>
+        </section>
+      </div>
+      <div class="container container--exemple">
+        <section class="exemple container__width">
+          <h2 class="exemple__title">Живой пример</h2>
+          <p class="exemple__content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+          <div class="exemple__list-wrapper">
+            <dl class="exemple__list">
+              <div class="exemple__item-container">
+                <dt class="exemple__item-definition">снижение веса</dt>
+                <dd class="exemple__item-description">5 КГ</dd>
+              </div>
+              <div class="exemple__item-container">
+                <dt class="exemple__item-definition">затрачено времени</dt>
+                <dd class="exemple__item-description">60 ДНЕЙ</dd>
+              </div>
+            </dl>
+            <dl class="exemple__list-spending">
+              <dt class="exemple__item-spending-definition">Затраты на питание: </dt>
+              <dd class="exemple__item-spending-description">&#160;15 000 РУБ.</dd>
+            </dl>
+          </div>
+          <div class="exemple__range-container slider">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat/barsik/cat-tablet.webp, img/cat/barsik/cat-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/cat/barsik/cat-tablet.png, img/cat/barsik/cat-tablet@2x.png 2x">
+              <source srcset="img/cat/barsik/before-mobile.webp, img/cat/barsik/before-mobile@2x.webp 2x" type="image/webp">
+              <img class="slider__picture" src="img/cat/barsik/before-mobile.png" alt="Кот Барсик фотография 'до'" width="280" height="277"
+              srcset="img/cat/barsik/before-mobile@2x.png 2x">
+            </picture>
+            <div class="exemple__range range">
+              <div class="range__scale">
+                <button class="range__button range__button--was" type="button">Было</button>
+                <button class="range__button range__button--become" type="button">Стало</button>
+                <div class="range__bar">
+                  <div class="range__toggle">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container container--information">
+        <section class="information">
+          <h2 class="visually-hidden">Контактные данные 'Кэт энержи'</h2>
+          <div class="information__contact-container container__width container__width--information">
+            <h3 class="information__title">приглашаем<br> к сотрудничеству дилеров!</h3>
+            <div class="information__content">
+              <p class="information__content-adress">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="information__content-adress">Санкт-Петербург</p>
+            </div>
+          </div>
+          <div class="information__cart">
+            <iframe class="information__img-iframe information__img-iframe--nojs"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003135!2d30.320858716175987!3d59.93871916905405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639586548206!5m2!1sru!2sru"
+              width="320" height="362" allowfullscreen
+              title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/background/location-desktop.webp 1x, img/background/location-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1440px)" srcset="img/background/location-desktop.jpg 1x, img/background/location-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/background/location-tablet.webp 1x, img/background/location-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/background/location-tablet.jpg 1x, img/background/location-tablet@2x.jpg 2x">
+                <source srcset="img/background/location-mobile.webp, img/background/location-mobile@2x.webp 2x" type="image/webp">
+                <img class="information__img-card information__img-card--nojs" src="img/background/location-mobile.jpg"
+                  srcset="img/information/location-mobile@2x.jpg 2x" alt="Карта с адресом местонахождения ул. Большая Конюшенная, 19/8, Санкт-Петербург" width="320" height="362">
+              </picture>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer container">
+      <div class="page-footer__content-container container__width">
+        <a class="page-footer__link-logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo_cat-energy/logo-footer_desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo_cat-energy/logo-footer_tablet.svg">
+            <img class="page-footer__logo-picture" src="img/logo_cat-energy/logo-footer_mobile.svg" alt="Логотип сайта 'Кэт энержи'" width="128" height="24">
+          </picture>
+        </a>
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <a class="page-footer__link-social page-footer__link" href="https://www.vk.com/htmlacademy">
+              <span class="visually-hidden">Вконтакте</span>
+              <svg class="page-footer__icon page-footer__icon--vkontakte" width="23" height="12">
+                <use href="img/sprite.svg#vkontakte"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link-social page-footer__link" href="https://www.instagram.com/htmlacademy/">
+              <span class="visually-hidden">Инстаграмм</span>
+              <svg class="page-footer__icon page-footer__icon--instagram" width="18" height="18">
+                <use href="img/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link-social page-footer__link" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Фэйсбук</span>
+              <svg class="page-footer__icon page-footer__icon--facebook" width="11" height="21">
+                <use href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
 
-  </body>
+        <div class="page-footer__developed">
+          <a class="page-footer__link page-footer__link--html-logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <p class="page-footer__developed-text">HTML Academy</p>
+            <svg class="page-footer__icon--htmlacademy page-footer__icon" width="27" height="34">
+              <use href="img/sprite.svg#html-academy"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var navHeader = document.querySelector(".page-header");
+    var navButton = document.querySelector(".page-header__button");
+
+    navHeader.classList.remove("page-header--nojs");
+    navButton.addEventListener("click", function () {
+      if (navHeader.classList.contains("page-header--closed")) {
+        navHeader.classList.remove("page-header--closed");
+        navHeader.classList.add("page-header--opened");
+      } else {
+        navHeader.classList.add("page-header--opened");
+        navHeader.classList.remove("page-header--opened");
+        navHeader.classList.add("page-header--closed");
+      }
+    });
+  </script>
+
+  <script>
+    const mapIframe = document.getElementsByClassName("information__img-iframe")[0]
+    mapIframe?.classList?.remove("information__img-iframe--nojs")
+
+    const mapPicture = document.getElementsByClassName("information__img-card")[0]
+    mapPicture?.classList?.remove("information__img-card--nojs")
+    mapPicture?.classList?.add("information__img-card--hidden")
+  </script>
+</body>
 </html>
