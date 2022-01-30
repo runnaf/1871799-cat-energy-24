@@ -66,6 +66,29 @@
   width: 100px;
   margin: 0;
   margin-bottom: 14px;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus-visible {
+    opacity: 0.3;
+  }
+}
+
+.catalog__link {
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus-visible {
+    opacity: 0.3;
+  }
 }
 
 .catalog__list-ineer {
@@ -163,7 +186,7 @@
   }
 
   &:active,
-  a:focus-visible {
+  &:focus-visible {
     color: hsla(0, 0%, 27%, 0.3);
   }
 }

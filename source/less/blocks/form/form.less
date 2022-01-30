@@ -251,9 +251,21 @@
   border-color: @darkgray;
 }
 
-.form__input-radio:active + .form__label-radio,
+.form__input-radio:disabled + .form__label-radio,
 .form__input-radio:focus-visible + .form__label-radio {
   opacity: 0.3;
+}
+
+.form__input-radio:active + .form__label-radio {
+  &::after {
+    border-color: @green;
+  }
+}
+
+.form__item:active .form__label-radio {
+  &::after {
+    border-color: @green;
+  }
 }
 
 .form__title {
@@ -374,6 +386,10 @@
 }
 
 .form__input-checkbox[type="checkbox"]:active + .form__input-desc .form__mark {
+  border-color: @green;
+}
+
+.form__item--checkbox:active .form__mark {
   border-color: @green;
 }
 
