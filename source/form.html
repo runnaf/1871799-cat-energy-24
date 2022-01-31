@@ -16,7 +16,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page-body page-body--ineer">
-  <header class="page-header container page-header--closed page-header--nojs page-header--ineer"> <!-- модификатор closed - закрытое ментю, модификатор opened - открытое меню, модификатор nojs - при отсутствии js -->
+  <header class="page-header container container--header page-header--closed page-header--nojs page-header--ineer"> <!-- модификатор closed - закрытое ментю, модификатор opened - открытое меню, модификатор nojs - при отсутствии js -->
     <div class="page-header__container container__width container__width--logo">
       <a class="page-header__link-logo page-header__link-logo--ineer" href="index.html">
         <picture>
@@ -45,7 +45,9 @@
     <h1 class="page-main__title page-main__title--form">Подбор программы</h1>
     <section class="form-section">
       <h2 class="visually-hidden">Форма для подбора программы для вашего кота</h2>
-      <p class="form-section__desc">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <div class="form-section__desc-wrapper">
+        <p class="form-section__desc">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <form class="form-section__group form">
         <div class="form__field-group-container">
           <fieldset class="form__field-group">
@@ -89,11 +91,13 @@
           </fieldset>
         </div>
         <fieldset class="form__field-group form__field-group--contacts">
-          <legend class="form__title  form__title--contacts">
-            <span class="form__title-desc">Контактные данные (владельца кота)</span>
+          <legend class="form__title-wrapper">
+            <span class="form__title  form__title--contacts">
+              <span class="form__title-desc">Контактные данные (владельца кота)</span>
+            </span>
           </legend>
           <div class="form__field-group-container form__field-group-container--contacts">
-            <div class="form__field">
+            <div class="form__field form__field--email">
               <label class="form__field-title form__field-title--required" for="newsletter-email">
                 <span class="form__field-title-desc">E-mail:</span>
                 <span class="form__field-title-required">*</span>
@@ -122,14 +126,18 @@
           </div>
         </fieldset>
         <fieldset class="form__field-group form__field-group--texarea">
-          <label class="form__title form__title--texarea" for="comments">
-            <span class="form__title-desc">Комментарий</span>
-          </label>
+          <div class="form__title-wrapper">
+            <label class="form__title form__title--texarea" for="comments">
+              <span class="form__title-desc">Комментарий</span>
+            </label>
+          </div>
           <textarea class="form__area" id="comments" name="comments" wrap="soft" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form__field-group form__field-group--checkbox">
-          <legend class="form__title">
-            <span class="form__title-desc">Дополнительно</span>
+          <legend class="form__title-wrapper form__title-wrapper--checkbox">
+            <span class="form__title">
+              <span class="form__title-desc">Дополнительно</span>
+            </span>
           </legend>
           <ul class="form__list form__list--checkbox">
             <li class="form__item form__item--checkbox">
@@ -187,11 +195,13 @@
     <div class="container container--information container--information-ineer">
       <section class="information">
         <h2 class="visually-hidden">Контактные данные 'Кэт энержи'</h2>
-        <div class="information__contact-container container__width container__width--information">
-          <h3 class="information__title">приглашаем<br> к сотрудничеству дилеров!</h3>
-          <div class="information__content">
-            <p class="information__content-adress">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="information__content-adress">Санкт-Петербург</p>
+        <div class="information__content-wrapper">
+          <div class="information__contact-container container__width container__width--information">
+            <h3 class="information__title">приглашаем<br> к сотрудничеству дилеров!</h3>
+            <div class="information__content">
+              <p class="information__content-adress">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="information__content-adress">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
         <div class="information__cart">

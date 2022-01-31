@@ -16,7 +16,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page-body page-body--ineer">
-  <header class="page-header container page-header--ineer page-header--closed page-header--nojs"> <!-- модификатор closed - закрытое ментю, модификатор opened - открытое меню, модификатор nojs - при отсутствии js -->
+  <header class="page-header container container--header page-header--ineer page-header--closed page-header--nojs"> <!-- модификатор closed - закрытое ментю, модификатор opened - открытое меню, модификатор nojs - при отсутствии js -->
     <div class="page-header__container container__width container__width--logo">
       <a class="page-header__link-logo page-header__link-logo--ineer" href="index.html">
         <picture>
@@ -271,7 +271,9 @@
       </ul>
     </section>
     <section class="additional-products">
-      <h2 class="additional-products__title"><span class="additional-products__title-desc">Дополнительные товары</span></h2>
+      <div class="additional-products__title-desc-wrapper">
+        <h2 class="additional-products__title"><span class="additional-products__title-desc">Дополнительные товары</span></h2>
+      </div>
       <ul class="additional-products__list">
         <li class="additional-products__item">
           <h3 class="additional-products__item-title">Сахарозаменитель</h3>
@@ -316,11 +318,13 @@
     <div class="container container--information container--information-ineer">
       <section class="information">
         <h2 class="visually-hidden">Контактные данные 'Кэт энержи'</h2>
-        <div class="information__contact-container container__width container__width--information">
-          <h3 class="information__title">приглашаем<br> к сотрудничеству дилеров!</h3>
-          <div class="information__content">
-            <p class="information__content-adress">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="information__content-adress">Санкт-Петербург</p>
+        <div class="information__content-wrapper">
+          <div class="information__contact-container container__width container__width--information">
+            <h3 class="information__title">приглашаем<br> к сотрудничеству дилеров!</h3>
+            <div class="information__content">
+              <p class="information__content-adress">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="information__content-adress">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
         <div class="information__cart">
