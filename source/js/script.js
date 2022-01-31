@@ -19,4 +19,3 @@ navButton.addEventListener("click", function () {
   const mapPicture = document.getElementsByClassName("information__img-card")[0]
   mapPicture?.classList?.remove("information__img-card--nojs")
   mapPicture?.classList?.add("information__img-card--hidden");
-
