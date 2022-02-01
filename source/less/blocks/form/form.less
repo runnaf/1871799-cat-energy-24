@@ -251,9 +251,20 @@
   border-color: @darkgray;
 }
 
-.form__input-radio:disabled + .form__label-radio,
 .form__input-radio:focus-visible + .form__label-radio {
   opacity: 0.3;
+}
+
+.form__input-radio:disabled:hover + .form__label-radio,
+.form__input-radio:disabled:active + .form__label-radio,
+.form__input-radio:disabled:focus + .form__label-radio {
+  opacity: 1;
+  outline: none;
+  cursor: default;
+
+  &::after {
+    border-color: @gray;
+  }
 }
 
 .form__input-radio:active + .form__label-radio {
@@ -381,9 +392,23 @@
   border-color: @darkgray;
 }
 
-.form__input-checkbox[type="checkbox"]:disabled + .form__input-desc,
 .form__input-checkbox[type="checkbox"]:focus-visible + .form__input-desc {
   opacity: 0.3;
+}
+
+.form__input-checkbox[type="checkbox"]:disabled + .form__input-desc {
+  opacity: 1;
+  cursor: default;
+}
+
+.form__input-checkbox[type="checkbox"]:disabled:hover + .form__input-desc .form__mark,
+.form__input-checkbox[type="checkbox"]:disabled:active + .form__input-desc .form__mark,
+.form__input-checkbox[type="checkbox"]:disabled:focus + .form__input-desc .form__mark {
+  border-color: @gray;
+}
+
+.form__input-checkbox[type="checkbox"]:disabled + .form__input-desc .form__mark {
+  border-color: @gray;
 }
 
 .form__input-checkbox[type="checkbox"]:active + .form__input-desc .form__mark {
